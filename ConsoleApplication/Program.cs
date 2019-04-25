@@ -15,7 +15,7 @@ namespace ConsoleApplication
             Console.Write("Please enter your location: ");
             var location = Console.ReadLine();
 
-            //Output user info
+            //Output user infos
             Console.WriteLine($"Your name is: { fullName }");
             Console.WriteLine($"You are from: { location }");
 
