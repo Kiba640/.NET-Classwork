@@ -26,6 +26,10 @@ namespace ConsoleApplication
 
             //calculate number of days until christmas and output the value
             //use class time span
+            TimeSpan duration = christmas - today;
+            var totalDays = Math.Floor(duration.TotalDays);
+
+            Console.WriteLine($"It is { totalDays } days until Christmas");
 
             // Book Code
             double width, height, woodLength, glassArea;
