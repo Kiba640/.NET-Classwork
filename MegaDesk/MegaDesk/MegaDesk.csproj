@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3E20BF0C-8CA9-4E4F-B82B-C4214CCB1016}</ProjectGuid>
+    <ProjectGuid>{9181F5A0-C3A3-449D-A4FA-C76DDB71AF6D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MathQuiz</RootNamespace>
-    <AssemblyName>MathQuiz</AssemblyName>
+    <RootNamespace>MegaDesk</RootNamespace>
+    <AssemblyName>MegaDesk</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>cirno icon.ico</ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,6 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddQuote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddQuote.Designer.cs">
+      <DependentUpon>AddQuote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desk.cs" />
+    <Compile Include="DeskQuote.cs" />
+    <Compile Include="DisplayQuote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayQuote.Designer.cs">
+      <DependentUpon>DisplayQuote.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +68,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchQuotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchQuotes.Designer.cs">
+      <DependentUpon>SearchQuotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAllQuotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllQuotes.Designer.cs">
+      <DependentUpon>ViewAllQuotes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddQuote.resx">
+      <DependentUpon>AddQuote.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -68,7 +94,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -82,9 +107,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="cirno icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
