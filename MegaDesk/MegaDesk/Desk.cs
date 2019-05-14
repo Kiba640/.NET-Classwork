@@ -16,10 +16,20 @@ namespace MegaDesk
         private int width;
         private int depth;
         private Material desktop;
+        private int numberOfDrawer;
 
         public enum Material
         {
             oak = 200, laminate = 100, pine = 50, rosewood = 300, veneer = 125
         }
+
+        Desk(int width, int depth, Material material, int drawers)
+        {
+            this.width = width;
+            this.depth = depth;
+            desktop = material;
+            numberOfDrawer = drawers;
+        }
+
     }
 }
