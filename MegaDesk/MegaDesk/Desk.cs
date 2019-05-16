@@ -13,23 +13,22 @@ namespace MegaDesk
         public const int minDepth = 12;
         public const int maxDepth = 48;
 
-        private int width;
-        private int depth;
-        private Material desktop;
+        private int width { get; }
+        private int depth { get; }
+        private Material desktop { get; }
         private int numberOfDrawer;
 
 
-        Desk(int width, int depth, Material material, int drawers)
+        public Desk(int width, int depth, Material material, int drawers)
         {
             this.width = width;
             this.depth = depth;
             desktop = material;
             numberOfDrawer = drawers;
         }
-
     }
     public enum Material
     {
-        oak = 200, laminate = 100, pine = 50, rosewood = 300, veneer = 125
+        oak, laminate, pine, rosewood, veneer
     }
 }
