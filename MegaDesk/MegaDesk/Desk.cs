@@ -13,10 +13,10 @@ namespace MegaDesk
         public const int minDepth = 12;
         public const int maxDepth = 48;
 
-        private int width { get; }
-        private int depth { get; }
-        private Material desktop { get; }
-        private int numberOfDrawer;
+        public int width;
+        public int depth;
+        public Material desktop;
+        public int numberOfDrawer;
 
 
         public Desk(int width, int depth, Material material, int drawers)
@@ -25,6 +25,11 @@ namespace MegaDesk
             this.depth = depth;
             desktop = material;
             numberOfDrawer = drawers;
+        }
+
+        public int getArea()
+        {
+            return width * depth;
         }
     }
     public enum Material

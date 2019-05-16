@@ -21,20 +21,29 @@ namespace MegaDesk
         private const decimal VENEER_COST = 125.0M;
 
 
-        private string customerName;
-        Desk desk;
-        DateTime date;
-        private decimal
+        public string customerName;
+        public Desk desk;
+        public DateTime quoteDate;
+        private decimal quotePrice { get; }
+        public Shipping shipping;
 
-        // create and add the shipping enum
-        DeskQuote(Desk desk, string name)
+        public DeskQuote(Desk desk, string name)
         {
+            this.desk = desk;
+            customerName = name;
+        }
+        //Calcuates the quote Price;
+        public void setPrice()
+        {
+            decimal price = BASE_DESK_PRICE;
+            int surfaceArea =  desk.getArea();
 
         }
-
-        //Calcuates the quote Price;
-
         
+    }
+    enum Shipping
+    {
+
     }
 
 }
