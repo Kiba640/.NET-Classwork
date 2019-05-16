@@ -17,4 +17,9 @@ namespace MegaDesk
 
         }
     }
+    public enum shipping
+    {
+        normal14, rush7, rush5, rush3 
+    }
+
 }
