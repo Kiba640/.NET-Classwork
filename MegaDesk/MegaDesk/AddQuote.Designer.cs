@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.deskWidth = new System.Windows.Forms.NumericUpDown();
+            this.deskDepth = new System.Windows.Forms.NumericUpDown();
             this.btn_exit = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.widthForm = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.Materials = new System.Windows.Forms.ComboBox();
+            this.deskWidth = new System.Windows.Forms.NumericUpDown();
+            this.numDrawers = new System.Windows.Forms.NumericUpDown();
+            this.MaterialsCombo = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,28 +42,28 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_submit = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.deskDepth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deskWidth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.widthForm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDrawers)).BeginInit();
             this.SuspendLayout();
             // 
-            // deskWidth
+            // deskDepth
             // 
-            this.deskWidth.Location = new System.Drawing.Point(81, 114);
-            this.deskWidth.Maximum = new decimal(new int[] {
+            this.deskDepth.Location = new System.Drawing.Point(81, 114);
+            this.deskDepth.Maximum = new decimal(new int[] {
             96,
             0,
             0,
             0});
-            this.deskWidth.Minimum = new decimal(new int[] {
+            this.deskDepth.Minimum = new decimal(new int[] {
             24,
             0,
             0,
             0});
-            this.deskWidth.Name = "deskWidth";
-            this.deskWidth.Size = new System.Drawing.Size(135, 20);
-            this.deskWidth.TabIndex = 0;
-            this.deskWidth.Value = new decimal(new int[] {
+            this.deskDepth.Name = "deskDepth";
+            this.deskDepth.Size = new System.Drawing.Size(135, 20);
+            this.deskDepth.TabIndex = 0;
+            this.deskDepth.Value = new decimal(new int[] {
             24,
             0,
             0,
@@ -87,53 +87,53 @@
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Please enter your full name";
             // 
-            // widthForm
+            // deskWidth
             // 
-            this.widthForm.Location = new System.Drawing.Point(81, 211);
-            this.widthForm.Maximum = new decimal(new int[] {
+            this.deskWidth.Location = new System.Drawing.Point(81, 211);
+            this.deskWidth.Maximum = new decimal(new int[] {
             48,
             0,
             0,
             0});
-            this.widthForm.Minimum = new decimal(new int[] {
+            this.deskWidth.Minimum = new decimal(new int[] {
             12,
             0,
             0,
             0});
-            this.widthForm.Name = "widthForm";
-            this.widthForm.Size = new System.Drawing.Size(135, 20);
-            this.widthForm.TabIndex = 3;
-            this.widthForm.Value = new decimal(new int[] {
+            this.deskWidth.Name = "deskWidth";
+            this.deskWidth.Size = new System.Drawing.Size(135, 20);
+            this.deskWidth.TabIndex = 3;
+            this.deskWidth.Value = new decimal(new int[] {
             12,
             0,
             0,
             0});
             // 
-            // numericUpDown2
+            // numDrawers
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(352, 27);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.numDrawers.Location = new System.Drawing.Point(352, 27);
+            this.numDrawers.Maximum = new decimal(new int[] {
             7,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(135, 20);
-            this.numericUpDown2.TabIndex = 4;
+            this.numDrawers.Name = "numDrawers";
+            this.numDrawers.Size = new System.Drawing.Size(135, 20);
+            this.numDrawers.TabIndex = 4;
             // 
-            // Materials
+            // MaterialsCombo
             // 
-            this.Materials.FormattingEnabled = true;
-            this.Materials.Items.AddRange(new object[] {
+            this.MaterialsCombo.FormattingEnabled = true;
+            this.MaterialsCombo.Items.AddRange(new object[] {
             "laminate",
             "oak",
             "rosewood",
             "veneer",
             "pine"});
-            this.Materials.Location = new System.Drawing.Point(352, 113);
-            this.Materials.Name = "Materials";
-            this.Materials.Size = new System.Drawing.Size(135, 21);
-            this.Materials.TabIndex = 5;
+            this.MaterialsCombo.Location = new System.Drawing.Point(352, 113);
+            this.MaterialsCombo.Name = "MaterialsCombo";
+            this.MaterialsCombo.Size = new System.Drawing.Size(135, 21);
+            this.MaterialsCombo.TabIndex = 5;
             // 
             // comboBox2
             // 
@@ -162,9 +162,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(31, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Height:";
+            this.label2.Text = "Depth:";
             // 
             // label3
             // 
@@ -210,6 +210,7 @@
             this.btn_submit.TabIndex = 13;
             this.btn_submit.Text = "Add Quote";
             this.btn_submit.UseVisualStyleBackColor = true;
+            this.btn_submit.Click += new System.EventHandler(this.Btn_submit_Click);
             // 
             // AddQuote
             // 
@@ -224,20 +225,20 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.Materials);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.widthForm);
+            this.Controls.Add(this.MaterialsCombo);
+            this.Controls.Add(this.numDrawers);
+            this.Controls.Add(this.deskWidth);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_exit);
-            this.Controls.Add(this.deskWidth);
+            this.Controls.Add(this.deskDepth);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddQuote";
             this.Text = "AddQuote";
             this.Load += new System.EventHandler(this.AddQuote_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.deskDepth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deskWidth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.widthForm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDrawers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,12 +246,12 @@
 
         #endregion
 
-        private System.Windows.Forms.NumericUpDown deskWidth;
+        private System.Windows.Forms.NumericUpDown deskDepth;
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.NumericUpDown widthForm;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.ComboBox Materials;
+        private System.Windows.Forms.NumericUpDown deskWidth;
+        private System.Windows.Forms.NumericUpDown numDrawers;
+        private System.Windows.Forms.ComboBox MaterialsCombo;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

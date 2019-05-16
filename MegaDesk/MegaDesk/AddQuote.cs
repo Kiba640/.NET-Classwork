@@ -26,8 +26,15 @@ namespace MegaDesk
         {
         }
 
+        private void Btn_submit_Click(object sender, EventArgs e)
+        {
 
-
+            int Depth = Convert.ToInt32(deskDepth.Value);
+            int Width = Convert.ToInt32(deskWidth.Value);
+            int NumberOfDrawers = (int)numDrawers.Value;
+            Material material = (Material)MaterialsCombo.SelectedValue;
+            Desk desk = new Desk(Width, Depth, material, NumberOfDrawers );
+        }
     }
 
 }
