@@ -28,13 +28,29 @@ namespace MegaDesk
 
         private void Btn_submit_Click(object sender, EventArgs e)
         {
+            var temp_desk = new Desk()
+            {
+                width = Convert.ToInt32(deskWidth.Value),
+                depth = Convert.ToInt32(deskDepth.Value),
+                numberOfDrawer = (int)numDrawers.Value,
+                desktop = (Material)MaterialsCombo.SelectedValue
+            };
 
-            int Depth = Convert.ToInt32(deskDepth.Value);
-            int Width = Convert.ToInt32(deskWidth.Value);
-            int NumberOfDrawers = (int)numDrawers.Value;
-            Material material = (Material)MaterialsCombo.SelectedValue;
-            Desk desk = new Desk(Width, Depth, material, NumberOfDrawers );
+            var deskQuote = new DeskQuote
+            {
+                desk = temp_desk,
+                customerName = txtcustomerName.Text,
+                quoteDate = DateTime.Now,
+                shipping = (Shipping)comShipping.SelectedValue
+
+            };
+            private void AddQuoteToFile(DeskQuote deskQuote)
+            {
+                var quotesFile = '@"quotes.json"'
+            }
         }
+
+
     }
 
 }

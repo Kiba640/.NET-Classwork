@@ -30,11 +30,11 @@
         {
             this.deskDepth = new System.Windows.Forms.NumericUpDown();
             this.btn_exit = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtcustomerName = new System.Windows.Forms.TextBox();
             this.deskWidth = new System.Windows.Forms.NumericUpDown();
             this.numDrawers = new System.Windows.Forms.NumericUpDown();
             this.MaterialsCombo = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comShipping = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -79,13 +79,13 @@
             this.btn_exit.UseVisualStyleBackColor = true;
             this.btn_exit.Click += new System.EventHandler(this.Btn_exit_Click);
             // 
-            // textBox1
+            // txtcustomerName
             // 
-            this.textBox1.Location = new System.Drawing.Point(81, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Please enter your full name";
+            this.txtcustomerName.Location = new System.Drawing.Point(81, 27);
+            this.txtcustomerName.Name = "txtcustomerName";
+            this.txtcustomerName.Size = new System.Drawing.Size(135, 20);
+            this.txtcustomerName.TabIndex = 2;
+            this.txtcustomerName.Text = "Please enter your full name";
             // 
             // deskWidth
             // 
@@ -135,18 +135,18 @@
             this.MaterialsCombo.Size = new System.Drawing.Size(135, 21);
             this.MaterialsCombo.TabIndex = 5;
             // 
-            // comboBox2
+            // comShipping
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comShipping.FormattingEnabled = true;
+            this.comShipping.Items.AddRange(new object[] {
             "Standard (14 Days)",
             "Rush (7 Days)",
             "Rush (5 Days)",
             "Rush (3 Days)"});
-            this.comboBox2.Location = new System.Drawing.Point(352, 210);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(131, 21);
-            this.comboBox2.TabIndex = 6;
+            this.comShipping.Location = new System.Drawing.Point(352, 210);
+            this.comShipping.Name = "comShipping";
+            this.comShipping.Size = new System.Drawing.Size(131, 21);
+            this.comShipping.TabIndex = 6;
             // 
             // label1
             // 
@@ -224,11 +224,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comShipping);
             this.Controls.Add(this.MaterialsCombo);
             this.Controls.Add(this.numDrawers);
             this.Controls.Add(this.deskWidth);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtcustomerName);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.deskDepth);
             this.MaximizeBox = false;
@@ -248,11 +248,11 @@
 
         private System.Windows.Forms.NumericUpDown deskDepth;
         private System.Windows.Forms.Button btn_exit;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtcustomerName;
         private System.Windows.Forms.NumericUpDown deskWidth;
         private System.Windows.Forms.NumericUpDown numDrawers;
         private System.Windows.Forms.ComboBox MaterialsCombo;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comShipping;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

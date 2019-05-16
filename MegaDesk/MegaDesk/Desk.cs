@@ -18,15 +18,6 @@ namespace MegaDesk
         public Material desktop;
         public int numberOfDrawer;
 
-
-        public Desk(int width, int depth, Material material, int drawers)
-        {
-            this.width = width;
-            this.depth = depth;
-            desktop = material;
-            numberOfDrawer = drawers;
-        }
-
         public int getArea()
         {
             return width * depth;

@@ -27,11 +27,6 @@ namespace MegaDesk
         private decimal quotePrice { get; }
         public Shipping shipping;
 
-        public DeskQuote(Desk desk, string name)
-        {
-            this.desk = desk;
-            customerName = name;
-        }
         //Calcuates the quote Price;
         public void setPrice()
         {
