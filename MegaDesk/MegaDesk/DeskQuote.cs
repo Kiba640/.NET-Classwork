@@ -31,14 +31,50 @@ namespace MegaDesk
         public void setPrice()
         {
             decimal price = BASE_DESK_PRICE;
+
+            //check the area of the desk and charge accordingly
             int surfaceArea =  desk.getArea();
+            if (surfaceArea > 1000)
+            {
+                price += (surfaceArea - 1000);
+            }
+
+            //check the desk material and add to cost accordingly
+            switch(desk.desktop)
+            {
+                case Material.oak:
+                    {
+                        price += OAK_COST;
+                        break;
+                    }
+                case Material.laminate:
+                    {
+                        price += LAMINATE_COST;
+                        break;
+                    }
+                case Material.pine:
+                    {
+                        price += PINE_COST;
+                        break;
+                    }
+                case Material.rosewood:
+                    {
+                        price += ROSEWOOD_COST;
+                        break;
+                    }
+                case Material.veneer:
+                    {
+                        price += VENEER_COST;
+                        break;
+                    }
+            }
 
         }
         
     }
     enum Shipping
     {
-
+        
     }
 
 }
