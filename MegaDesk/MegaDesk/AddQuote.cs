@@ -46,7 +46,7 @@ namespace MegaDesk
             };
             private void AddQuoteToFile(DeskQuote deskQuote)
             {
-                var quotesFile = '@"quotes.json"'
+                var quotesFile = '@"quotes.json"';
             }
         }
 
