@@ -18,6 +18,8 @@ namespace MegaDesk
         public AddQuote()
         {
             InitializeComponent();
+            MaterialsCombo.DataSource = Enum.GetValues(typeof(Material));
+            comShipping.DataSource = Enum.GetValues(typeof(Shipping));
         }
 
         private void Btn_exit_Click(object sender, EventArgs e)

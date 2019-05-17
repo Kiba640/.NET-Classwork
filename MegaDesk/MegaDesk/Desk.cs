@@ -22,6 +22,11 @@ namespace MegaDesk
         {
             return width * depth;
         }
+        public Desk()
+        {
+            width = 0;
+            depth = 0;
+        }
     }
     public enum Material
     {

@@ -15,7 +15,7 @@ namespace MegaDesk
         public SearchQuotes()
         {
             InitializeComponent();
-            cbSearch.DataSource = Enum.GetValues(typeof(Shipping));
+            cbSearch.DataSource = Enum.GetValues(typeof(Material));
         }
 
     }
