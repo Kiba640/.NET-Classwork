@@ -44,10 +44,13 @@ namespace MegaDesk
                 shipping = (Shipping)comShipping.SelectedValue
 
             };
-            private void AddQuoteToFile(DeskQuote deskQuote)
-            {
-                var quotesFile = '@"quotes.json"';
-            }
+
+            var quotesFile = @"quotes.json";
+            List<DeskQuote> deskquotes = new List<DeskQuote>();
+
+            //read existing quotes if any
+            if (File.)
+            //List<DeskQuote> deskQuotes = JsonConvert.DeserializeObject<
         }
 
 
