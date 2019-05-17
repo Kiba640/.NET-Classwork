@@ -69,12 +69,41 @@ namespace MegaDesk
                     }
             }
 
+            switch(shipping)
+            {
+                case Shipping.standard14:
+                    {
+                        break;
+                    }
+                case Shipping.rush3:
+                    {
+                        if(surfaceArea < 1000) { price += 60; }
+                        else if(surfaceArea <= 2000) { price += 70; }
+                        else { price += 80; }
+                        break;
+                    }
+                case Shipping.rush5:
+                    {
+                        if (surfaceArea < 1000) { price += 40; }
+                        else if (surfaceArea <= 2000) { price += 50; }
+                        else { price += 60; }
+                        break;
+                    }
+                case Shipping.rush7:
+                    {
+                        if (surfaceArea < 1000) { price += 30; }
+                        else if (surfaceArea <= 2000) { price += 35; }
+                        else { price += 40; }
+                        break;
+                    }
+            }
+
         }
         
     }
     enum Shipping
     {
-        
+        standard14, rush3, rush5, rush7
     }
 
 }
