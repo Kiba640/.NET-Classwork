@@ -1,12 +1,15 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace MegaDesk
 {
@@ -49,8 +52,25 @@ namespace MegaDesk
             List<DeskQuote> deskquotes = new List<DeskQuote>();
 
             //read existing quotes if any
-            if (File.)
-            //List<DeskQuote> deskQuotes = JsonConvert.DeserializeObject<
+            if (File.Exists(quotesFile))
+            {
+                using (StreamReader reader = new StreamReader(quotesFile))
+                {
+                    //load existing quotes
+                    string quotes = reader.ReadToEnd();
+
+                    if (quotes.Length > 0)
+                    {
+                        // deserialization time!
+                        deskquotes = JsonConvert.DeserializeObject<List<DeskQuote>>(File.ReadAllText(quotesFile)) ?? new List<DeskQuote>();
+                    }
+                }
+            }
+            deskquotes.Add(deskQuote);
+            string jsonDesks = JsonConvert.SerializeObject(deskquotes);
+            File.WriteAllText(quotesFile, jsonDesks);
+
+
         }
 
 
