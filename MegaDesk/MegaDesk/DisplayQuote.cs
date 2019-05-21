@@ -12,9 +12,19 @@ namespace MegaDesk
 {
     public partial class DisplayQuote : Form
     {
-        public DisplayQuote()
+        DeskQuote _deskQuote;
+        public DisplayQuote(DeskQuote deskQuote)
         {
             InitializeComponent();
+
+            _deskQuote = deskQuote;
+
+            customerName.Text = deskQuote.customerName;
+        }
+
+        private void DisplayQuote_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

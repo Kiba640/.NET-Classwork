@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MegaDesk
 {
 
-    class DeskQuote
+    public class DeskQuote
     {
 
 
@@ -102,7 +102,7 @@ namespace MegaDesk
         }
         
     }
-    enum Shipping
+   public enum Shipping
     {
         standard14, rush3, rush5, rush7
     }

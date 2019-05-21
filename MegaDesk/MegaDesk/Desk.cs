@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MegaDesk
 {
-    class Desk
+    public class Desk
     {
         public const int minWidth = 24;
         public const int maxWidth = 96;
