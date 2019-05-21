@@ -46,11 +46,11 @@ namespace MegaDesk
                 desk = temp_desk,
                 customerName = txtcustomerName.Text,
                 quoteDate = DateTime.Now,
-                shipping = (Shipping)comShipping.SelectedValue
-
+                shipping = (Shipping)comShipping.SelectedValue,
+                quotePrice = 0
                 
             };
-
+            deskQuote.setPrice();
             var quotesFile = @"quotes.json";
             List<DeskQuote> deskquotes = new List<DeskQuote>();
 
@@ -78,7 +78,7 @@ namespace MegaDesk
 
             DisplayQuote displayQuote = new DisplayQuote(deskQuote);
             displayQuote.Show();
-
+            
 
         }
 

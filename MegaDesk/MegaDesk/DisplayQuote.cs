@@ -20,6 +20,7 @@ namespace MegaDesk
             _deskQuote = deskQuote;
 
             customerName.Text = deskQuote.customerName;
+            customerPrice.Text = "$ " + deskQuote.quotePrice.ToString();
         }
 
         private void DisplayQuote_Load(object sender, EventArgs e)
