@@ -48,6 +48,7 @@ namespace MegaDesk
                 quoteDate = DateTime.Now,
                 shipping = (Shipping)comShipping.SelectedValue
 
+                
             };
 
             var quotesFile = @"quotes.json";
@@ -71,6 +72,12 @@ namespace MegaDesk
             deskquotes.Add(deskQuote);
             string jsonDesks = JsonConvert.SerializeObject(deskquotes);
             File.WriteAllText(quotesFile, jsonDesks);
+
+            //var newQuoteString = deskquotes[2]; 
+            //MessageBox.Show(newQuoteString);
+
+            DisplayQuote displayQuote = new DisplayQuote(deskQuote);
+            displayQuote.Show();
 
 
         }
