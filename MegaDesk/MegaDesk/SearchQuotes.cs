@@ -40,10 +40,13 @@ namespace MegaDesk
                 }
             }
 
+            //var to hold the place of the row
+            int row = 0;
             // display all data to the grid by default
             foreach (DeskQuote quote in deskquotes)
             {
-               
+                quoteGrid.Rows.Add();
+
             }
         }
 
