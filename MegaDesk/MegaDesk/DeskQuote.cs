@@ -25,7 +25,7 @@ namespace MegaDesk
         public string customerName;
         public Desk desk;
         public DateTime quoteDate;
-        private decimal quotePrice { get; }
+        public decimal quotePrice { get; }
         public Shipping shipping;
 
         //Calcuates the quote Price;
