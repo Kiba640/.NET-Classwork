@@ -11,6 +11,7 @@ namespace MegaDesk
     {
 
 
+
         private const decimal BASE_DESK_PRICE = 200.00M;
         private const decimal SURFACE_COST = 1.0M;
         private const decimal DRAWER_COST = 50.0M;

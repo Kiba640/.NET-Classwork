@@ -30,7 +30,16 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.cbSearch = new System.Windows.Forms.ComboBox();
-            this.dspyTxtBox = new System.Windows.Forms.TextBox();
+            this.quoteGrid = new System.Windows.Forms.DataGridView();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Material = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shipping = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.srchBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.quoteGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -46,28 +55,94 @@
             // cbSearch
             // 
             this.cbSearch.FormattingEnabled = true;
-            this.cbSearch.Location = new System.Drawing.Point(12, 43);
+            this.cbSearch.Location = new System.Drawing.Point(12, 63);
             this.cbSearch.Name = "cbSearch";
             this.cbSearch.Size = new System.Drawing.Size(228, 33);
             this.cbSearch.TabIndex = 1;
             // 
-            // dspyTxtBox
+            // quoteGrid
             // 
-            this.dspyTxtBox.Location = new System.Drawing.Point(12, 93);
-            this.dspyTxtBox.Name = "dspyTxtBox";
-            this.dspyTxtBox.Size = new System.Drawing.Size(643, 31);
-            this.dspyTxtBox.TabIndex = 2;
+            this.quoteGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.quoteGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.quoteGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.quoteGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FullName,
+            this.Width,
+            this.Depth,
+            this.Material,
+            this.Price,
+            this.Date,
+            this.Shipping});
+            this.quoteGrid.Location = new System.Drawing.Point(18, 111);
+            this.quoteGrid.Name = "quoteGrid";
+            this.quoteGrid.RowTemplate.Height = 33;
+            this.quoteGrid.Size = new System.Drawing.Size(770, 271);
+            this.quoteGrid.TabIndex = 2;
+            // 
+            // FullName
+            // 
+            this.FullName.HeaderText = "Name";
+            this.FullName.Name = "FullName";
+            this.FullName.Width = 113;
+            // 
+            // Width
+            // 
+            this.Width.HeaderText = "Width";
+            this.Width.Name = "Width";
+            this.Width.Width = 112;
+            // 
+            // Depth
+            // 
+            this.Depth.HeaderText = "Depth";
+            this.Depth.Name = "Depth";
+            this.Depth.Width = 114;
+            // 
+            // Material
+            // 
+            this.Material.HeaderText = "Material";
+            this.Material.Name = "Material";
+            this.Material.Width = 134;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Drawers";
+            this.Price.Name = "Price";
+            this.Price.Width = 136;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.Width = 102;
+            // 
+            // Shipping
+            // 
+            this.Shipping.HeaderText = "Shipping";
+            this.Shipping.Name = "Shipping";
+            this.Shipping.Width = 141;
+            // 
+            // srchBtn
+            // 
+            this.srchBtn.Location = new System.Drawing.Point(335, 63);
+            this.srchBtn.Name = "srchBtn";
+            this.srchBtn.Size = new System.Drawing.Size(119, 33);
+            this.srchBtn.TabIndex = 3;
+            this.srchBtn.Text = "Search";
+            this.srchBtn.UseVisualStyleBackColor = true;
+            this.srchBtn.Click += new System.EventHandler(this.SrchBtn_Click);
             // 
             // SearchQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dspyTxtBox);
+            this.Controls.Add(this.srchBtn);
+            this.Controls.Add(this.quoteGrid);
             this.Controls.Add(this.cbSearch);
             this.Controls.Add(this.label1);
             this.Name = "SearchQuotes";
             this.Text = "SearchQuotes";
+            ((System.ComponentModel.ISupportInitialize)(this.quoteGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,6 +152,14 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbSearch;
-        private System.Windows.Forms.TextBox dspyTxtBox;
+        private System.Windows.Forms.DataGridView quoteGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Width;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Depth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Material;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Shipping;
+        private System.Windows.Forms.Button srchBtn;
     }
 }
