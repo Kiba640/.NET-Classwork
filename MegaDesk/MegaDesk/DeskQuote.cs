@@ -98,6 +98,7 @@ namespace MegaDesk
                         break;
                     }
             }
+            quotePrice = price;
 
         }
         
