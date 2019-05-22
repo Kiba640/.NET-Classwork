@@ -40,20 +40,38 @@ namespace MegaDesk
                 }
             }
 
-            //var to hold the place of the row
-            int row = 0;
             // display all data to the grid by default
-            foreach (DeskQuote quote in deskquotes)
-            {
-                quoteGrid.Rows.Add();
-
-            }
+            display(deskquotes);
         }
 
         private void SrchBtn_Click(object sender, EventArgs e)
         {
+            List<DeskQuote> tempList = deskquotes;
 
+            string selected = cbSearch.SelectedIndex.ToString();
             
+                
+            foreach (DeskQuote quote in tempList)
+            {
+            }
+        }
+
+        private void display(List<DeskQuote> quoteList)
+        {
+            quoteGrid.Rows.Clear();
+            quoteGrid.Refresh();
+            foreach (DeskQuote quote in quoteList)
+            {
+                quoteGrid.Rows.Add(new object[]
+                {quote.customerName,
+                 quote.desk.width,
+                 quote.desk.depth,
+                 quote.desk.desktop,
+                 quote.desk.numberOfDrawer,
+                 quote.quotePrice,
+                 quote.quoteDate,
+                 quote.shipping});
+            }
         }
     }
 }
