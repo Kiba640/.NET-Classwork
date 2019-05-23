@@ -148,6 +148,7 @@
             this.clrButton.TabIndex = 4;
             this.clrButton.Text = "Clear";
             this.clrButton.UseVisualStyleBackColor = true;
+            this.clrButton.Click += new System.EventHandler(this.ClrButton_Click);
             // 
             // SearchQuotes
             // 
