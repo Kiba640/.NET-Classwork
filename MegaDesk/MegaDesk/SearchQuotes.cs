@@ -64,8 +64,8 @@ namespace MegaDesk
                         tempList.Add(quote);
                     }
                 }
+                display(tempList);
             }
-            display(tempList);
         }
 
         private void display(List<DeskQuote> quoteList)
