@@ -46,14 +46,19 @@ namespace MegaDesk
 
         private void SrchBtn_Click(object sender, EventArgs e)
         {
-            List<DeskQuote> tempList = deskquotes;
+            List<DeskQuote> tempList = new List<DeskQuote>();
 
-            string selected = cbSearch.SelectedIndex.ToString();
+            string selected = cbSearch.SelectedValue.ToString();
             
                 
-            foreach (DeskQuote quote in tempList)
+            foreach (DeskQuote quote in deskquotes)
             {
+                if(quote.desk.desktop.ToString() == selected)
+                {
+                    tempList.Add(quote);
+                }
             }
+            display(tempList);
         }
 
         private void display(List<DeskQuote> quoteList)
@@ -72,6 +77,11 @@ namespace MegaDesk
                  quote.quoteDate,
                  quote.shipping});
             }
+        }
+
+        private void ClrButton_Click(object sender, EventArgs e)
+        {
+            display(deskquotes);
         }
     }
 }

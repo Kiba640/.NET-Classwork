@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbSearch = new System.Windows.Forms.ComboBox();
             this.quoteGrid = new System.Windows.Forms.DataGridView();
-            this.srchBtn = new System.Windows.Forms.Button();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Depth = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +39,7 @@
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Shipping = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.srchBtn = new System.Windows.Forms.Button();
             this.clrButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.quoteGrid)).BeginInit();
             this.SuspendLayout();
@@ -81,16 +81,6 @@
             this.quoteGrid.RowTemplate.Height = 33;
             this.quoteGrid.Size = new System.Drawing.Size(848, 283);
             this.quoteGrid.TabIndex = 2;
-            // 
-            // srchBtn
-            // 
-            this.srchBtn.Location = new System.Drawing.Point(335, 63);
-            this.srchBtn.Name = "srchBtn";
-            this.srchBtn.Size = new System.Drawing.Size(119, 37);
-            this.srchBtn.TabIndex = 3;
-            this.srchBtn.Text = "Search";
-            this.srchBtn.UseVisualStyleBackColor = true;
-            this.srchBtn.Click += new System.EventHandler(this.SrchBtn_Click);
             // 
             // FullName
             // 
@@ -139,6 +129,16 @@
             this.Shipping.HeaderText = "Shipping";
             this.Shipping.Name = "Shipping";
             this.Shipping.Width = 141;
+            // 
+            // srchBtn
+            // 
+            this.srchBtn.Location = new System.Drawing.Point(335, 63);
+            this.srchBtn.Name = "srchBtn";
+            this.srchBtn.Size = new System.Drawing.Size(119, 37);
+            this.srchBtn.TabIndex = 3;
+            this.srchBtn.Text = "Search";
+            this.srchBtn.UseVisualStyleBackColor = true;
+            this.srchBtn.Click += new System.EventHandler(this.SrchBtn_Click);
             // 
             // clrButton
             // 
