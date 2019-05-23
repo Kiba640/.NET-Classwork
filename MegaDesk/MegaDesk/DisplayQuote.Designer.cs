@@ -41,11 +41,12 @@
             this.numShipping = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.numWidth = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // customerName
             // 
-            this.customerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.customerName.Location = new System.Drawing.Point(12, 9);
             this.customerName.Name = "customerName";
             this.customerName.Size = new System.Drawing.Size(323, 39);
@@ -196,11 +197,21 @@
             this.numWidth.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.numWidth.Click += new System.EventHandler(this.NumWidth_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 299);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 31);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Main Menu";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // DisplayQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(347, 344);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.numWidth);
             this.Controls.Add(this.label7);
@@ -240,5 +251,6 @@
         private System.Windows.Forms.Label numShipping;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label numWidth;
+        private System.Windows.Forms.Button button1;
     }
 }

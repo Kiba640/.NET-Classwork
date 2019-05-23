@@ -122,8 +122,5 @@
   <ItemGroup>
     <None Include="Resources\sound icon even Smaller.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="tem_shop.wav" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
