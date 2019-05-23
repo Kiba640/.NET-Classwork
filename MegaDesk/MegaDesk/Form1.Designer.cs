@@ -34,6 +34,7 @@
             this.btn_newQuote = new System.Windows.Forms.Button();
             this.btn_viewQuote = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,22 +87,37 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(34, 283);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(68, 23);
+            this.checkBox1.TabIndex = 5;
+            this.checkBox1.Text = "Play Music";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(499, 341);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_newQuote);
             this.Controls.Add(this.btn_viewQuote);
             this.Controls.Add(this.btn_searchQuote);
             this.Controls.Add(this.btn_exit);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainMenu";
             this.Text = "Main Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -112,6 +128,7 @@
         private System.Windows.Forms.Button btn_newQuote;
         private System.Windows.Forms.Button btn_viewQuote;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

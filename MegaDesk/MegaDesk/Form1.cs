@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -43,6 +44,25 @@ namespace MegaDesk
         {
             SearchQuotes search = new SearchQuotes();
             search.Show();
+        }
+
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            var player = new SoundPlayer();
+
+            if (checkBox1.Checked)
+            {
+                //SoundPlayer Mainplayer = player;
+                player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "tem_shop.wav";
+                player.PlayLooping();
+                checkBox1.Text = "Mute Music";
+            }
+
+            else
+            {
+                checkBox1.Text = "Play Music";
+                player.Stop();
+            }
         }
     }
 }
