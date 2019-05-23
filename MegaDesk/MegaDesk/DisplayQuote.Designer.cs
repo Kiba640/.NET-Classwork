@@ -41,7 +41,6 @@
             this.numShipping = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.numWidth = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // customerName
@@ -58,9 +57,9 @@
             // 
             this.customerPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerPrice.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.customerPrice.Location = new System.Drawing.Point(201, 299);
+            this.customerPrice.Location = new System.Drawing.Point(156, 299);
             this.customerPrice.Name = "customerPrice";
-            this.customerPrice.Size = new System.Drawing.Size(131, 31);
+            this.customerPrice.Size = new System.Drawing.Size(176, 31);
             this.customerPrice.TabIndex = 1;
             this.customerPrice.Text = "price";
             this.customerPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -70,7 +69,7 @@
             // 
             this.priceTitle.AutoSize = true;
             this.priceTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTitle.Location = new System.Drawing.Point(113, 299);
+            this.priceTitle.Location = new System.Drawing.Point(73, 299);
             this.priceTitle.Name = "priceTitle";
             this.priceTitle.Size = new System.Drawing.Size(89, 31);
             this.priceTitle.TabIndex = 2;
@@ -197,21 +196,11 @@
             this.numWidth.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.numWidth.Click += new System.EventHandler(this.NumWidth_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 299);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 31);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Main Menu";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // DisplayQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(347, 344);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.numWidth);
             this.Controls.Add(this.label7);
@@ -251,6 +240,5 @@
         private System.Windows.Forms.Label numShipping;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label numWidth;
-        private System.Windows.Forms.Button button1;
     }
 }
