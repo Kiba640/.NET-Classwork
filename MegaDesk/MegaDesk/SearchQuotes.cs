@@ -47,15 +47,22 @@ namespace MegaDesk
         private void SrchBtn_Click(object sender, EventArgs e)
         {
             List<DeskQuote> tempList = new List<DeskQuote>();
+            string selected;
 
-            string selected = cbSearch.SelectedValue.ToString();
-            
-                
-            foreach (DeskQuote quote in deskquotes)
+            if (cbSearch.SelectedValue == null)
             {
-                if(quote.desk.desktop.ToString() == selected)
+                MessageBox.Show("Please select something");
+            }
+
+            else
+            {
+                selected = cbSearch.SelectedValue.ToString();
+                foreach (DeskQuote quote in deskquotes)
                 {
-                    tempList.Add(quote);
+                    if (quote.desk.desktop.ToString() == selected)
+                    {
+                        tempList.Add(quote);
+                    }
                 }
             }
             display(tempList);
