@@ -10,6 +10,9 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<select asp-for="StandardWorks" asp-items="Model.Scripture">
+    <option value="">All</option>
+</select>
 <table class="table">
     <thead>
         <tr>

@@ -29,14 +29,15 @@ namespace My_Scripture_Journal.Pages
 
         public async Task OnGetAsync()
         {
-            var scriptures = from m in _context.Scripture
-                         select m;
-            if (!string.IsNullOrEmpty(SearchString))
+            IQueryable<string> StandardWorkQuery = from s in _context.Scripture
+                                            orderby s.Book
+                                            select s.Book;
+            if (!string.IsNullOrEmpty(StandardWorkBook))
             {
-                scriptures = scriptures.Where(s => s.StandardWork.Contains(SearchString));
+                StandardWorkBook = StandardWorkBook.Where(x => x.Book == StandardWorkBook);
             }
 
-            Scripture = await scriptures.ToListAsync();
+            Scripture = await StandardWorkBook.ToListAsync();
         }
     }
 }
