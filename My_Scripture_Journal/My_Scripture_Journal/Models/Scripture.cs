@@ -9,6 +9,7 @@ namespace My_Scripture_Journal.Models
     public class Scripture
     {
         public int ID { get; set; }
+        [Display(Name = "Standard Work")]
         public string StandardWork { get; set; }
         public string Book { get; set; }
         public int Chapter { get; set; }
