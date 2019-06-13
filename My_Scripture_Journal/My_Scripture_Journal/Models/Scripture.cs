@@ -14,8 +14,8 @@ namespace My_Scripture_Journal.Models
         public string Book { get; set; }
         public int Chapter { get; set; }
         public string Verses { get; set; }
-        public String Note { get; set; }
-        public String Passage { get; set; }
+        public string Note { get; set; }
+        public string Passage { get; set; }
 
         [DataType(DataType.DateTime)]
         public String dateAdded = DateTime.Now.ToString("MM/dd/yyyy h:mm tt");

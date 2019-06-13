@@ -19,9 +19,8 @@ namespace My_Scripture_Journal.Pages
             _context = context;
         }
 
-        public IList<Scripture> Scripture { get;set; }
-        [BindProperty(SupportsGet = true)]
-        public string SearchString { get; set; }
+        public IList<Scripture> Scriptures;
+        //public string SearchString { get; set; }
         // Requires using Microsoft.AspNetCore.Mvc.Rendering;
         public SelectList StandardWorks { get; set; }
         [BindProperty(SupportsGet = true)]
@@ -30,14 +29,16 @@ namespace My_Scripture_Journal.Pages
         public async Task OnGetAsync()
         {
             IQueryable<string> StandardWorkQuery = from s in _context.Scripture
-                                            orderby s.Book
-                                            select s.Book;
+                                            orderby s.StandardWork
+                                            select s.StandardWork;
+            var canon = from c in _context.Scripture
+                        select c;
             if (!string.IsNullOrEmpty(StandardWorkBook))
             {
-                StandardWorkBook = StandardWorkBook.Where(x => x.Book == StandardWorkBook);
+                canon = canon.Where(x => x.StandardWork == StandardWorkBook);
             }
 
-            Scripture = await StandardWorkBook.ToListAsync();
+            Scriptures = await canon.ToListAsync();
         }
     }
 }

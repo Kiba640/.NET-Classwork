@@ -10,38 +10,38 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
-<select asp-for="StandardWorks" asp-items="Model.Scripture">
+<select asp-for="StandardWorks" asp-items="@(new SelectList(Model.Scriptures, "ID", "StandardWork"))">
     <option value="">All</option>
 </select>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Scripture[0].StandardWork)
+                @Html.DisplayNameFor(model => model.Scriptures[0].StandardWork)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scripture[0].Book)
+                @Html.DisplayNameFor(model => model.Scriptures[0].Book)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scripture[0].Chapter)
+                @Html.DisplayNameFor(model => model.Scriptures[0].Chapter)
+            </th>s
+            <th>
+                @Html.DisplayNameFor(model => model.Scriptures[0].Verses)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scripture[0].Verses)
+                @Html.DisplayNameFor(model => model.Scriptures[0].Note)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scripture[0].Note)
+                @Html.DisplayNameFor(model => model.Scriptures[0].Passage)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scripture[0].Passage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Scripture[0].DateAdded)
+                @Html.DisplayNameFor(model => model.Scriptures[0].DateAdded)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Scripture) {
+@foreach (var item in Model.Scriptures) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.StandardWork)
