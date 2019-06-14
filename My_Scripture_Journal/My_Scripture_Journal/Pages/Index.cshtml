@@ -10,9 +10,14 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
-<select asp-for="StandardWorks" asp-items="@(new SelectList(Model.Scriptures, "ID", "StandardWork"))">
-    <option value="">All</option>
-</select>
+<form>
+    <p>
+        <select asp-for="StandardWorks" asp-items="@(new SelectList(Model.Scriptures, "ID", "StandardWork"))">
+            <option value="">All</option>
+        </select>
+        <input type="submit" value="Filter" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
